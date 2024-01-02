@@ -6,6 +6,9 @@ The Toy Robot Simulator is a simple application that simulates the movement of a
 ## Usage
 ### Command Line Interface (CLI)
 
+![Screenshot from 2024-01-02 18-31-51](https://github.com/marcelegodoy/ToyRobot/assets/58745066/83ead6a4-25b9-44ca-a97d-5f085268589a)
+
+
 Clone the repository:
 ```
 git clone https://github.com/marcelegodoy/ToyRobot.git
@@ -27,6 +30,8 @@ ruby lib/toy_robot_cli.rb
 ```
 
 ### Web Version
+
+![Screenshot from 2024-01-02 18-31-15](https://github.com/marcelegodoy/ToyRobot/assets/58745066/127b920d-9628-4f4a-b855-0a61864aaa5c)
 
 Clone the repository (if not already cloned):
 
