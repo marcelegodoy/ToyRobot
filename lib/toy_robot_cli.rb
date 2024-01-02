@@ -8,6 +8,14 @@ class ToyRobotCLI
 
   def start
     puts 'Toy Robot Simulator - Command Line Interface'
+    puts '---'
+    puts 'These are some command examples of how you can change the robot position:'
+    puts 'PLACE x,y,DIRECTION - Define a new position for robot'
+    puts 'MOVE - Move to the direction it is facing'
+    puts 'LEFT - Turn the robot around to left'
+    puts 'RIGHT - Turn the robot around to right'
+    puts 'REPORT - Show where the robot is'
+    puts 'EXIT - Close the simulation'
 
     loop do
       print '> '
@@ -17,18 +25,18 @@ class ToyRobotCLI
       when /^PLACE (\d+),(\d+),(NORTH|SOUTH|EAST|WEST)$/
         x, y, facing = $1.to_i, $2.to_i, $3
         @toy_robot_service.place(x, y, facing)
-        puts "The robot is now at position x: #{@toy_robot_service.current_robot.x_coord}, y:#{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
+        puts "The robot is now at position x: #{@toy_robot_service.current_robot.x_coord}, y: #{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
       when 'MOVE'
         @toy_robot_service.move
-        puts "The moved to position x: #{@toy_robot_service.current_robot.x_coord}, y:#{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
+        puts "The robot moved to position x: #{@toy_robot_service.current_robot.x_coord}, y: #{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
       when 'LEFT'
         @toy_robot_service.rotate('left')
-        puts "The rotated to left and is now at position x: #{@toy_robot_service.current_robot.x_coord}, y:#{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
+        puts "The rotated to left and is now at position x: #{@toy_robot_service.current_robot.x_coord}, y: #{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
       when 'RIGHT'
         @toy_robot_service.rotate('right')
-        puts "The rotated to right and is now at position x: #{@toy_robot_service.current_robot.x_coord}, y:#{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
+        puts "The rotated to right and is now at position x: #{@toy_robot_service.current_robot.x_coord}, y: #{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
       when 'REPORT'
-        puts "The robot is now at position x: #{@toy_robot_service.current_robot.x_coord}, y:#{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
+        puts "The robot is now at position x: #{@toy_robot_service.current_robot.x_coord}, y: #{@toy_robot_service.current_robot.y_coord} and facing: #{@toy_robot_service.current_robot.facing}"
       when 'EXIT'
         puts 'Exiting Toy Robot Simulator. Goodbye!'
         break
