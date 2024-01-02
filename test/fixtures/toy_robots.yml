@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  x_coord: 1
+  y_coord: 1
+  facing: 'north'
+
+two:
+  x_coord: 1
+  y_coord: 1
+  facing: 'south'
