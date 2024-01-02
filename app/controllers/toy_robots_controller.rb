@@ -1,7 +1,7 @@
 class ToyRobotsController < ApplicationController  
 
   def index
-    @robot = ToyRobot.first_or_create(x_coord: 0, y_coord: 0, facing: 'south')
+    @robot = ToyRobot.first_or_create(x_coord: 0, y_coord: 0, facing: 'north')
     @current_position = { x_coord: @robot.x_coord, y_coord: @robot.y_coord, facing: @robot.facing }
   end
 
