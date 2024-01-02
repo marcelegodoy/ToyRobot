@@ -60,3 +60,7 @@ rails server
 ```
 
 Open your web browser and visit http://localhost:3000 to interact with the web version.
+
+## Ruby and Rails Versions
+Ruby: 3.2.2
+Rails: 7.0
